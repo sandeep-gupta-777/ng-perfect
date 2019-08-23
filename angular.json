@@ -138,5 +138,8 @@
       }
     }
   },
-  "defaultProject": "ng-perfect"
+  "defaultProject": "ng-perfect",
+  "cli": {
+    "defaultCollection": "@ngxs/schematics"
+  }
 }
