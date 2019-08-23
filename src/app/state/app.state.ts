@@ -1,9 +1,6 @@
 import { State, Action, StateContext } from '@ngxs/store';
 import { AppAction } from './app.actions';
-
-export class AppStateModel {
-  public items: string[];
-}
+import {AppStateModel} from '../typings/store/app';
 
 @State<AppStateModel>({
   name: 'app',

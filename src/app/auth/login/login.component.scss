@@ -1,0 +1,81 @@
+.grid-container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: .35fr 0.4fr 0.25fr;
+  grid-template-rows: 0.20fr 0.80fr;
+  grid-template-areas:
+    "side-bg header header"
+    "side-bg login-box login-box"
+    "side-bg footer .";
+  background: rgba(158, 158, 158, 0.24);
+
+  .side-bg {
+    grid-area: side-bg;
+    position: relative;
+    padding: 32px 16px 32px 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+
+    .bg-image {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      //z-index: -1;
+      background-color: black; //fallback
+      opacity: 0.6;
+      background: url("https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") no-repeat;
+      background-size: cover;
+      filter: grayscale(1);
+      background-position-x: -142px;
+      background-position-y: 0;
+    }
+
+    .intro {
+      z-index: 10;
+
+      h1, p {
+        color: rgba(214, 221, 211, 1);
+      }
+
+      button {
+        background: transparent !important;
+        color: rgba(214, 221, 211, 1);
+      }
+    }
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+
+  .header {
+    grid-area: header;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .login-box {
+    grid-area: login-box;
+    display: flex;
+    //align-items: center;
+    //flex-direction: column;
+    justify-content: center;
+  }
+}
+
+
+h1 {
+  margin-bottom: 4px;
+  font-size: 32px;
+}
+
+h2 {
+  margin-bottom: 4px;
+  font-size: 20px;
+}

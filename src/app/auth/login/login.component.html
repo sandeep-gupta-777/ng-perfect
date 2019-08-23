@@ -1,0 +1,20 @@
+<!--design credits: https://miro.medium.com/max/2096/1*0XgvdyI5GRDPSM-wUcuwAw.png-->
+
+<div class="grid-container">
+  <div class="side-bg">
+    <div class="bg-image"></div>
+    <div class="intro">
+      <h1>ng-perfect</h1>
+      <p>Become a confident Angular developer by learning Angular concept with real world examples and best
+        practices</p>
+      <button nz-button>Home</button>
+    </div>
+  </div>
+  <div class="login-box">
+    <ngp-login-form (login$)="loginSubmitHandler($event)"></ngp-login-form>
+  </div>
+  <div class="header text-small">
+    <a href="">Don't have an account? Register</a>
+  </div>
+  <div class="footer"></div>
+</div>

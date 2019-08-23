@@ -13,4 +13,7 @@ export class HttpService {
   makeGetReq<T>(url: string): Observable<T> {
     return this.httpClient.get<T>(url);
   }
+  makePostReq<T>(url: string, body:any): Observable<T> {
+    return this.httpClient.post<T>(url, body);
+  }
 }

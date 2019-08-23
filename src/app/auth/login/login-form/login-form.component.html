@@ -1,0 +1,36 @@
+<div>
+  <header>
+    <h2>Sign In</h2>
+    <p class="muted">Please enter username and password.</p>
+  </header>
+  <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-label nzFor="name">Username</nz-form-label>
+      <nz-form-control nzErrorTip="Please input your username!">
+        <nz-input-group nzPrefixIcon="user">
+          <input type="text" nz-input formControlName="email" placeholder="Username"/>
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label nzFor="name">Password</nz-form-label>
+      <nz-form-control nzErrorTip="Please input your Password!">
+        <nz-input-group nzPrefixIcon="lock">
+          <input type="password" nz-input formControlName="password" placeholder="Password"/>
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <a class="login-form-forgot text-small">Forgot password</a>
+        <div *loadify="'api/users/login'; let statusChanged$ = statusChanged$">
+          <button
+                  [nzLoading]="(statusChanged$|async)?.loading" nz-button
+                  class="login-form-button" [nzType]="(statusChanged$|async)?.error?'danger':'primary'">Log in
+          </button>
+          <i>{{(statusChanged$|async)?.error_message}}</i>
+        </div>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</div>

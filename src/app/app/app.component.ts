@@ -1,13 +1,13 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpService} from '../../projects/http/src/lib/http.service';
+import {HttpService} from '../../../projects/http/src/lib/http.service';
 
 @Component({
-  selector: 'app-root',
+  selector: 'ngp-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'ng-perfect2';
+  title = 'ng-perfect';
 
   constructor(private http: HttpService) {
   }
