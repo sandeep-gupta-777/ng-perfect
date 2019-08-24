@@ -15,16 +15,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
+import {CoreModule} from './core/core.module';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CoreModule,
     NgxsModule.forRoot([
       AppState
     ]),
@@ -37,7 +39,9 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
+  providers: [{provide: NZ_I18N, useValue: en_US}],
+  exports: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

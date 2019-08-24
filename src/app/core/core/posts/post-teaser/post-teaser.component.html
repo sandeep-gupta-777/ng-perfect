@@ -1,0 +1,31 @@
+<nz-card style="width: 640px"
+         [nzExtra]="extraTemplate" nzTitle="Card title"
+         [nzActions]="[actionSetting, actionEdit, actionEllipsis,   actionEllipsis ]">
+  <nz-card-meta
+    nzTitle="Card title"
+    nzDescription="This is the description This is the description This is the description This is the description This is the description This is the description This is the description This is the description This is the description This is the description This is the description This is the description This is the description This is the description This is the description This is the description This is the description This is the description This is the description
+    This is the description This is the description This is the description This is the description "
+    [nzAvatar]="avatarTemplate"
+  ></nz-card-meta>
+</nz-card>
+<ng-template #avatarTemplate>
+  <nz-avatar nzSrc="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+</ng-template>
+<ng-template #coverTemplate>
+  <img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />
+</ng-template>
+<ng-template #actionSetting>
+  <i nz-icon nzType="like" nzTheme="outline"></i>
+</ng-template>
+<ng-template #actionEdit>
+  <i nz-icon nzType="wechat" nzTheme="outline"></i>
+</ng-template>
+<ng-template #actionEllipsis>
+
+  <div>
+    <i nz-icon nzType="ellipsis"></i>
+    hello this is test</div>
+</ng-template>
+<ng-template #extraTemplate>
+  <a>More</a>
+</ng-template>
